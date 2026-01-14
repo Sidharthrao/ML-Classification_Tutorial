@@ -1,0 +1,330 @@
+# ============================================================================
+# KL_requirements.txt
+# Comprehensive Dependency List for Fraud Detection ML Project
+# ============================================================================
+# 
+# Installation:
+#   pip install -r KL_requirements.txt
+#
+# For development:
+#   pip install -r KL_requirements.txt
+#
+# Note: This file includes all dependencies for the complete project including
+# existing implementations and new KL_ enhancements.
+#
+# Python Version: 3.8+
+# Last Updated: 2025-11-12
+# ============================================================================
+
+# ============================================================================
+# CORE DATA PROCESSING
+# ============================================================================
+pandas>=2.0.0              # DataFrame operations and data manipulation
+numpy>=1.24.0             # Numerical computing and array operations
+scipy>=1.10.0             # Scientific computing and statistical functions
+
+# ============================================================================
+# MACHINE LEARNING - CORE FRAMEWORKS
+# ============================================================================
+scikit-learn>=1.3.0       # Core ML algorithms and utilities
+                          # Includes: LogisticRegression, DecisionTree, 
+                          # RandomForest, GradientBoosting, SVM, KNN, etc.
+
+# ============================================================================
+# MACHINE LEARNING - ADVANCED ALGORITHMS
+# ============================================================================
+xgboost>=2.0.0            # Extreme Gradient Boosting (primary model)
+lightgbm>=4.0.0           # Light Gradient Boosting Machine
+catboost>=1.2.0           # CatBoost gradient boosting
+
+# ============================================================================
+# IMBALANCED DATA HANDLING
+# ============================================================================
+imbalanced-learn>=0.11.0  # SMOTE, ADASYN, SMOTETomek, and other techniques
+                          # Essential for fraud detection (0.13% fraud rate)
+
+# ============================================================================
+# HYPERPARAMETER OPTIMIZATION
+# ============================================================================
+optuna>=3.3.0             # Bayesian hyperparameter optimization
+                          # More efficient than GridSearch/RandomSearch
+
+# ============================================================================
+# MODEL INTERPRETATION & EXPLAINABILITY
+# ============================================================================
+shap>=0.42.0              # SHapley Additive exPlanations
+                          # For model interpretability and feature importance
+lime>=0.2.0               # Local Interpretable Model-agnostic Explanations
+                          # Alternative interpretation method
+
+# ============================================================================
+# VISUALIZATION LIBRARIES
+# ============================================================================
+matplotlib>=3.7.0         # Static plotting and visualization
+seaborn>=0.12.0           # Statistical data visualization
+plotly>=5.14.0            # Interactive visualizations
+                          # Useful for EDA and presentations
+
+# ============================================================================
+# PROGRESS TRACKING
+# ============================================================================
+tqdm>=4.65.0              # Progress bars for long-running operations
+                          # Essential for data extraction and training
+
+# ============================================================================
+# WEB API DEVELOPMENT
+# ============================================================================
+flask>=2.3.0              # Web framework for REST API
+flask-cors>=4.0.0         # Cross-Origin Resource Sharing support
+                          # Allows API access from different origins
+
+# ============================================================================
+# DATA EXPORT FORMATS
+# ============================================================================
+pyarrow>=12.0.0           # Parquet file format support
+                          # Fast, columnar storage format
+fastparquet>=2023.4.0     # Alternative Parquet implementation
+
+# ============================================================================
+# DATABASE CONNECTIVITY
+# ============================================================================
+# sqlite3 is included in Python standard library
+# For other databases, uncomment as needed:
+# pymongo>=4.3.0          # MongoDB connector
+# psycopg2-binary>=2.9.0  # PostgreSQL connector
+# mysql-connector-python>=8.0.0  # MySQL connector
+
+# ============================================================================
+# UTILITIES & HELPERS
+# ============================================================================
+joblib>=1.3.0             # Model serialization and parallel processing
+python-dateutil>=2.8.0    # Date/time utilities
+pytz>=2023.3              # Timezone definitions
+
+# ============================================================================
+# STATISTICAL TESTING
+# ============================================================================
+statsmodels>=0.14.0       # Statistical models and tests
+                          # For advanced statistical analysis in EDA
+
+# ============================================================================
+# JUPYTER NOTEBOOK SUPPORT
+# ============================================================================
+jupyter>=1.0.0            # Jupyter notebook environment
+notebook>=6.5.0           # Jupyter notebook server
+ipykernel>=6.22.0         # IPython kernel for Jupyter
+ipywidgets>=8.0.0         # Interactive widgets for notebooks
+
+# ============================================================================
+# CODE QUALITY & DEVELOPMENT TOOLS
+# ============================================================================
+black>=23.3.0             # Code formatter
+flake8>=6.0.0             # Linting tool
+pytest>=7.3.0             # Testing framework
+pytest-cov>=4.0.0         # Code coverage for tests
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+sphinx>=6.2.0             # Documentation generator
+sphinx-rtd-theme>=1.2.0   # ReadTheDocs theme
+
+# ============================================================================
+# TYPE CHECKING
+# ============================================================================
+mypy>=1.3.0               # Static type checker
+types-requests>=2.31.0    # Type stubs for requests
+
+# ============================================================================
+# ADDITIONAL MACHINE LEARNING LIBRARIES (OPTIONAL BUT RECOMMENDED)
+# ============================================================================
+# Uncomment if you want to explore additional models:
+
+# tensorflow>=2.13.0      # Deep learning framework
+# keras>=2.13.0           # High-level neural networks API
+# torch>=2.0.0            # PyTorch deep learning
+# scikit-optimize>=0.9.0  # Sequential model-based optimization
+
+# ============================================================================
+# FEATURE ENGINEERING (OPTIONAL)
+# ============================================================================
+# featuretools>=1.26.0    # Automated feature engineering
+# category_encoders>=2.6.0  # Advanced categorical encoding methods
+
+# ============================================================================
+# TIME SERIES (IF NEEDED FOR TEMPORAL ANALYSIS)
+# ============================================================================
+# prophet>=1.1.0          # Facebook's forecasting tool
+# pmdarima>=2.0.0         # Auto ARIMA
+
+# ============================================================================
+# CLOUD DEPLOYMENT (OPTIONAL)
+# ============================================================================
+# boto3>=1.26.0           # AWS SDK for Python
+# google-cloud-storage>=2.9.0  # Google Cloud Storage
+# azure-storage-blob>=12.16.0  # Azure Blob Storage
+
+# ============================================================================
+# MONITORING & LOGGING (PRODUCTION)
+# ============================================================================
+# sentry-sdk>=1.25.0      # Error tracking
+# prometheus-client>=0.16.0  # Metrics collection
+
+# ============================================================================
+# NOTES ON VERSIONS
+# ============================================================================
+# 
+# Version Specifications:
+# - >=X.Y.Z: Minimum version required (allows newer versions)
+# - ==X.Y.Z: Exact version (use only when necessary for compatibility)
+# - ~=X.Y.Z: Compatible release (allows patch versions)
+#
+# Educational Notes:
+# ------------------
+# 1. Always use virtual environments to avoid conflicts
+# 2. Pin versions in production (use ==) for reproducibility
+# 3. Use >= in development for latest features
+# 4. Test thoroughly after any version upgrades
+# 5. Keep requirements.txt in version control
+#
+# Installation Best Practices:
+# ---------------------------
+# 1. Create virtual environment:
+#    python -m venv venv
+#    source venv/bin/activate  # On Unix/macOS
+#    venv\Scripts\activate     # On Windows
+#
+# 2. Upgrade pip:
+#    pip install --upgrade pip
+#
+# 3. Install requirements:
+#    pip install -r KL_requirements.txt
+#
+# 4. Verify installations:
+#    pip list
+#    pip check  # Check for conflicts
+#
+# 5. Save current environment (if modified):
+#    pip freeze > KL_requirements_frozen.txt
+#
+# ============================================================================
+# DEPENDENCY TREE (MAJOR COMPONENTS)
+# ============================================================================
+#
+# Machine Learning Pipeline:
+#   pandas → numpy, python-dateutil
+#   scikit-learn → numpy, scipy, joblib
+#   xgboost → numpy, scipy
+#   lightgbm → numpy, scipy
+#   imbalanced-learn → scikit-learn
+#   optuna → (various)
+#
+# Visualization:
+#   matplotlib → numpy, pillow
+#   seaborn → matplotlib, pandas
+#   plotly → (various)
+#
+# Web API:
+#   flask → werkzeug, jinja2, click
+#   flask-cors → flask
+#
+# Jupyter:
+#   jupyter → notebook, ipykernel
+#   notebook → jupyter-core, tornado
+#
+# Model Interpretation:
+#   shap → numpy, pandas, scikit-learn
+#   lime → numpy, scipy, scikit-learn
+#
+# ============================================================================
+# TROUBLESHOOTING COMMON ISSUES
+# ============================================================================
+#
+# Issue: "No module named 'sklearn'"
+# Solution: Install scikit-learn (not sklearn package)
+#
+# Issue: LightGBM installation fails on Windows
+# Solution: Install Visual C++ Build Tools or use conda
+#
+# Issue: SHAP installation issues
+# Solution: Ensure scikit-learn is installed first
+#
+# Issue: Jupyter kernel not found
+# Solution: python -m ipykernel install --user
+#
+# Issue: Import errors after installation
+# Solution: Restart Python kernel/IDE
+#
+# ============================================================================
+# MEMORY & PERFORMANCE CONSIDERATIONS
+# ============================================================================
+#
+# For Large Datasets (6M+ rows):
+# - Use chunked processing in pandas (chunksize parameter)
+# - Consider dask for out-of-core computation (optional)
+# - Use pyarrow/parquet for efficient storage
+# - Monitor memory with memory_profiler (optional)
+#
+# For Faster Training:
+# - Ensure numpy/scipy use optimized BLAS (MKL, OpenBLAS)
+# - Use n_jobs=-1 for parallel processing
+# - Consider GPU acceleration for deep learning
+#
+# ============================================================================
+# COMPATIBILITY NOTES
+# ============================================================================
+#
+# Python 3.8+: All packages fully supported
+# Python 3.9+: Recommended (better performance)
+# Python 3.10+: All packages compatible
+# Python 3.11+: Most packages compatible (check individual packages)
+#
+# Operating Systems:
+# - Linux: Full support (recommended for production)
+# - macOS: Full support (may need Xcode Command Line Tools)
+# - Windows: Full support (may need Visual C++ Build Tools)
+#
+# ============================================================================
+# SECURITY CONSIDERATIONS
+# ============================================================================
+#
+# 1. Regularly update dependencies for security patches:
+#    pip list --outdated
+#    pip install --upgrade <package>
+#
+# 2. Check for security vulnerabilities:
+#    pip install safety
+#    safety check
+#
+# 3. Use trusted package sources (PyPI)
+# 4. Review dependencies of dependencies
+# 5. Consider using pip-audit for security auditing
+#
+# ============================================================================
+# LICENSE INFORMATION
+# ============================================================================
+#
+# Most dependencies use permissive licenses (MIT, BSD, Apache 2.0)
+# Notable exceptions:
+# - LightGBM: MIT License
+# - XGBoost: Apache 2.0
+# - CatBoost: Apache 2.0
+# - Optuna: MIT License
+#
+# Always check specific package licenses for commercial use
+#
+# ============================================================================
+# EDUCATIONAL RESOURCES
+# ============================================================================
+#
+# Official Documentation:
+# - Scikit-learn: https://scikit-learn.org/
+# - XGBoost: https://xgboost.readthedocs.io/
+# - LightGBM: https://lightgbm.readthedocs.io/
+# - Pandas: https://pandas.pydata.org/docs/
+# - Optuna: https://optuna.readthedocs.io/
+# - SHAP: https://shap.readthedocs.io/
+#
+# ============================================================================
+
+# End of KL_requirements.txt
